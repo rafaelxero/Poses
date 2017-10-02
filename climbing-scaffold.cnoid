@@ -1,0 +1,555 @@
+items: 
+  id: 0
+  name: "Root"
+  plugin: Base
+  class: RootItem
+  children: 
+    - 
+      id: 1
+      name: "ModelLoader"
+      plugin: Base
+      class: ExtCommandItem
+      data: 
+        command: openhrp-model-loader
+        executeOnLoading: true
+        waitingTimeAfterStarted: 0
+    - 
+      id: 2
+      name: "World"
+      plugin: Body
+      class: WorldItem
+      data: 
+        collisionDetection: true
+        collisionDetector: AISTCollisionDetector
+      children: 
+        - 
+          id: 3
+          name: "HRP5P"
+          plugin: Body
+          class: BodyItem
+          data: 
+            modelFile: "${MODEL}/HRP5P/model/HRP5P.yaml"
+            currentBaseLink: ""
+            rootPosition: [ 1.0203548, -0.226770971, 3.37906819 ]
+            rootAttitude: [ 
+              0.809224902, 0.274602933, -0.519372975, 
+              -0.179489968, 0.957330215, 0.226499913, 
+              0.559408983, -0.0900671308, 0.823983921 ]
+            jointPositions: [ 
+               0.243238, -0.073335, -0.930635,  1.411881, -0.283805,  0.307905,  0.193438,  0.188159, -0.223452,  0.582412, 
+              -0.132924,  0.045210,  0.618530,  0.120107,  0.846078,  0.469494, -0.164061, -0.201478,  1.422327, -0.296765, 
+              -0.073365, -1.631792, -0.064840, -0.741557,  0.309588, -0.379995,  1.087340, -0.738274, -1.200787, -1.136209, 
+               0.738274,  1.200787, -1.136209,  0.738274,  1.200787, -0.578762,  1.123423,  1.754875,  2.008315, -1.042528, 
+              -1.681375, -0.457941, -0.060013,  0.261853, -0.902335,  0.870919,  1.331686,  0.933751, -0.794125, -1.514946, 
+               0.933751, -0.794125, -1.514946,  0.000000 ]
+            initialRootPosition: [ 0, 0, 0.79 ]
+            initialRootAttitude: [ 
+              1, 0, 0, 
+              0, 1, 0, 
+              0, 0, 1 ]
+            initialJointPositions: [ 
+               0.000000,  0.000000, -0.471239,  0.872700, -0.401426,  0.000000,  0.000000,  0.000000, -0.471239,  0.872700, 
+              -0.401426,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.261800, -0.174500, 
+               0.000000, -0.523600,  0.000000, -0.500000,  0.000000,  0.000000,  0.017450,  0.000000,  0.000000, -0.017450, 
+               0.000000,  0.000000, -0.017450,  0.000000,  0.000000,  0.000000,  0.261800,  0.174500,  0.000000, -0.523600, 
+               0.000000,  0.500000,  0.000000,  0.000000, -0.017450,  0.000000,  0.000000,  0.017450,  0.000000,  0.000000, 
+               0.017450,  0.000000,  0.000000 ]
+            zmp: [ 0, 0, 0 ]
+            collisionDetection: true
+            selfCollisionDetection: false
+            isEditable: true
+          children: 
+            - 
+              id: 4
+              name: "BodyRTC"
+              plugin: OpenRTM
+              class: BodyRTCItem
+              data: 
+                isImmediateMode: true
+                controllerOptions: ""
+                moduleName: "ModifiedServo"
+                confFileName: "${PROJECT_DIR}/Virtual-HRP5P-RTC-MultiContact_hmc2.conf"
+                configurationMode: "Use Configuration File"
+                AutoConnect: true
+                InstanceName: "HRP5PController(Robot)0"
+                bodyPeriodicRate: 0.002
+                RelativePathBase: "RTC directory"
+        - 
+          id: 5
+          name: "floor"
+          plugin: Body
+          class: BodyItem
+          data: 
+            modelFile: "${MODEL}/floor.wrl"
+            currentBaseLink: ""
+            rootPosition: [ 0, 0, -0.1 ]
+            rootAttitude: [ 
+              1, 0, 0, 
+              0, 1, 0, 
+              0, 0, 1 ]
+            jointPositions: [  ]
+            initialRootPosition: [ 0, 0, -0.1 ]
+            initialRootAttitude: [ 
+              1, 0, 0, 
+              0, 1, 0, 
+              0, 0, 1 ]
+            zmp: [ 0, 0, 0 ]
+            collisionDetection: true
+            selfCollisionDetection: false
+            isEditable: true
+        - 
+          id: 6
+          name: "AISTSimulator"
+          plugin: Body
+          class: AISTSimulatorItem
+          data: 
+            realtimeSync: true
+            recording: "full"
+            timeRangeMode: "Unlimited"
+            timeLength: 500
+            allLinkPositionOutputMode: false
+            deviceStateOutput: true
+            selfCollision: false
+            controllerThreads: true
+            recordCollisionData: false
+            controllerOptions: ""
+            dynamicsMode: "Forward dynamics"
+            integrationMode: "Runge Kutta"
+            gravity: [ 0, 0, -9.80665 ]
+            staticFriction: 1
+            dynamicFriction: 1
+            cullingThresh: 0.01
+            contactCullingDepth: 0.01
+            errorCriterion: 0.001
+            maxNumIterations: 100
+            contactCorrectionDepth: 0.0002
+            contactCorrectionVelocityRatio: 1
+            kinematicWalking: false
+            2Dmode: false
+            oldAccelSensorMode: false
+        - 
+          id: 7
+          name: "scaffold"
+          plugin: Base
+          class: SceneItem
+          data: 
+            file: "/home/rcisneros/src/rcisneros/hrg/models/Construction/scaffold.wrl"
+            format: AVAILABLE-SCENE-FILE
+            translation: [ 0, 0, 0 ]
+            rotation: [ 1, 0, 0, 0 ]
+    - 
+      id: 8
+      name: "RTSystem"
+      plugin: OpenRTM
+      class: RTSystemItem
+      data: 
+        AutoConnection: true
+views: 
+  - 
+    id: 0
+    plugin: Base
+    class: ItemPropertyView
+    mounted: true
+  - 
+    id: 1
+    plugin: Base
+    class: ItemTreeView
+    mounted: true
+    state: 
+      selected: [ 7, 3 ]
+      checked: [ 1, 2, 3, 4, 5, 7, 8 ]
+      expanded: [ 2, 3 ]
+  - 
+    id: 2
+    plugin: Base
+    class: MessageView
+    mounted: true
+  - 
+    id: 3
+    name: "Multi SE3 Seq"
+    plugin: Base
+    class: MultiSE3SeqGraphView
+    state: 
+      mode: view
+      editMode: freeLine
+      original: true
+      velocity: false
+      acceleration: false
+      limits: true
+      grid: true
+      gridWidth: 0.2
+      gridHeight: 0.2
+      lineWidth: 1
+      rulers: false
+      sync: true
+      controlPointStep: 1
+      controlPointOffset: 0
+      controlPointHeighlight: false
+      scrollMode: continuous
+      lower: -10
+      upper: 10
+      visibleElements: [ 0, 1, 2 ]
+  - 
+    id: 4
+    name: "Multi Value Seq"
+    plugin: Base
+    class: MultiValueSeqGraphView
+    state: 
+      mode: view
+      editMode: freeLine
+      original: true
+      velocity: false
+      acceleration: false
+      limits: true
+      grid: true
+      gridWidth: 0.2
+      gridHeight: 0.2
+      lineWidth: 1
+      rulers: false
+      sync: true
+      controlPointStep: 1
+      controlPointOffset: 0
+      controlPointHeighlight: false
+      scrollMode: continuous
+      lower: -10
+      upper: 10
+  - 
+    id: 5
+    plugin: Base
+    class: SceneView
+    mounted: true
+    state: 
+      editMode: false
+      viewpointControlMode: thirdPerson
+      collisionLines: false
+      polygonMode: fill
+      defaultHeadLight: true
+      defaultHeadLightIntensity: 0.75
+      headLightLightingFromBack: false
+      worldLight: false
+      worldLightIntensity: 0.5
+      worldLightAmbient: 0.3
+      additionalLights: true
+      fog: true
+      floorGrid: false
+      floorGridSpan: 10
+      floorGridInterval: 0.5
+      xzGridSpan: 10
+      xzGridInterval: 0.5
+      xzGrid: false
+      yzGridSpan: 10
+      yzGridInterval: 0.5
+      texture: true
+      lineWidth: 1
+      pointSize: 1
+      normalVisualization: false
+      normalLength: 0.01
+      coordinateAxes: true
+      fpsTestIteration: 1
+      showFPS: false
+      enableNewDisplayListDoubleRendering: false
+      useBufferForPicking: true
+      upsideDown: false
+      cameras: 
+        - 
+          camera: [ System, Perspective ]
+          isCurrent: true
+          fieldOfView: 0.6978
+          near: 0.01
+          far: 10000
+          eye: [ 3.31045663, -1.76677799, 4.06223294 ]
+          direction: [ -0.80888386, 0.553387206, -0.198669326 ]
+          up: [ -0.163968872, 0.112177137, 0.980066579 ]
+        - 
+          camera: [ System, Orthographic ]
+          orthoHeight: 20
+          near: 0.01
+          far: 10000
+      backgroundColor: [ 0.100000001, 0.100000001, 0.300000012 ]
+      gridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
+      xzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
+      yzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
+      dedicatedItemTreeViewChecks: false
+  - 
+    id: 6
+    name: "Task"
+    plugin: Base
+    class: TaskView
+    state: 
+      layoutMode: horizontal
+      isAutoMode: false
+  - 
+    id: 7
+    name: "Text Editor"
+    plugin: Base
+    class: TextEditView
+  - 
+    id: 8
+    plugin: Body
+    class: BodyLinkView
+    mounted: true
+    state: 
+      showRotationMatrix: false
+  - 
+    id: 9
+    name: "Body State"
+    plugin: Body
+    class: BodyStateView
+    mounted: true
+  - 
+    id: 10
+    name: "Joint Trajectories"
+    plugin: Body
+    class: JointGraphView
+    state: 
+      mode: view
+      editMode: freeLine
+      original: true
+      velocity: false
+      acceleration: false
+      limits: true
+      grid: true
+      gridWidth: 0.2
+      gridHeight: 0.2
+      lineWidth: 1
+      rulers: false
+      sync: true
+      controlPointStep: 1
+      controlPointOffset: 0
+      controlPointHeighlight: false
+      scrollMode: continuous
+      lower: -10
+      upper: 10
+  - 
+    id: 11
+    plugin: Body
+    class: JointSliderView
+    mounted: true
+    state: 
+      showAllJoints: true
+      jointId: true
+      name: true
+      numColumns: 1
+      spinBox: true
+      slider: true
+      labelOnLeft: true
+      currentBodyItem: 3
+  - 
+    id: 12
+    name: "Joint State"
+    plugin: Body
+    class: JointStateView
+    mounted: true
+  - 
+    id: 13
+    plugin: Body
+    class: LinkSelectionView
+    mounted: true
+    state: 
+      listingMode: "Link List"
+      currentBodyItem: 3
+      bodyItems: 
+        - 
+          id: 3
+          selectedLinks: [ 0 ]
+        - 
+          id: 5
+          selectedLinks: [ 0 ]
+  - 
+    id: 14
+    name: "Nameserver"
+    plugin: Corba
+    class: NameServerView
+    mounted: true
+  - 
+    id: 15
+    name: "GrxUI Menu"
+    plugin: GrxUI
+    class: GrxUIMenuView
+    mounted: true
+  - 
+    id: 16
+    name: "RTC Diagram"
+    plugin: OpenRTM
+    class: RTSDiagramView
+    mounted: true
+  - 
+    id: 17
+    plugin: OpenRTM
+    class: RTSNameServerView
+    mounted: true
+  - 
+    id: 18
+    name: "RTC Properties"
+    plugin: OpenRTM
+    class: RTSPropertiesView
+    mounted: true
+  - 
+    id: 19
+    plugin: Python
+    class: PythonConsoleView
+    mounted: true
+toolbars: 
+  "TimeBar": 
+    minTime: 0
+    maxTime: 120
+    frameRate: 1000
+    playbackFrameRate: 50
+    idleLoopDrivenMode: false
+    currentTime: 0
+    speedScale: 1
+    syncToOngoingUpdates: true
+    autoExpansion: true
+  "KinematicsBar": 
+    mode: IK
+    enablePositionDragger: true
+    penetrationBlock: true
+    collisionLinkHighlight: true
+    snapDistance: 0.025
+    penetrationBlockDepth: 0.0005
+    lazyCollisionDetectionMode: true
+  "BodyBar": 
+    current: 3
+  "LeggedBodyBar": 
+    stanceWidth: 0.15
+  "BodyMotionGenerationBar": 
+    autoGenerationForNewBody: true
+    balancer: false
+    autoGeneration: false
+    timeScaleRatio: 1
+    preInitialDuration: 1
+    postFinalDuration: 1
+    onlyTimeBarRange: false
+    makeNewBodyItem: true
+    stealthyStepMode: true
+    stealthyHeightRatioThresh: 2
+    flatLiftingHeight: 0.005
+    flatLandingHeight: 0.005
+    impactReductionHeight: 0.005
+    impactReductionTime: 0.04
+    autoZmp: true
+    minZmpTransitionTime: 0.1
+    zmpCenteringTimeThresh: 0.03
+    zmpTimeMarginBeforeLiftingSpin: 0
+    zmpMaxDistanceFromCenter: 0.02
+    allLinkPositions: false
+    lipSyncMix: false
+    timeToStartBalancer: 0
+    balancerIterations: 2
+    plainBalancerMode: false
+    boundaryConditionType: position
+    boundarySmootherType: quintic
+    boundarySmootherTime: 0.5
+    boundaryCmAdjustment: false
+    boundaryCmAdjustmentTime: 1
+    waistHeightRelaxation: false
+    gravity: 9.8
+    dynamicsTimeRatio: 1
+Body: 
+  "BodyMotionEngine": 
+    updateJointVelocities: false
+  "EditableSceneBody": 
+    editableSceneBodies: 
+      - 
+        bodyItem: 3
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 5
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+    staticModelEditing: false
+  "KinematicFaultChecker": 
+    checkJointPositions: true
+    angleMargin: 0
+    translationMargin: 0
+    checkJointVelocities: true
+    velocityLimitRatio: 100
+    targetJoints: all
+    checkSelfCollisions: true
+    onlyTimeBarRange: false
+OpenRTM: 
+  "deleteUnmanagedRTCsOnStartingSimulation": true
+Python: 
+  "moduleSearchPath": 
+    - ${PROGRAM_TOP}/lib/python2.7/dist-packages/hrpsys
+viewAreas: 
+  - 
+    type: embedded
+    tabs: true
+    contents: 
+      type: splitter
+      orientation: horizontal
+      sizes: [ 1490, 359 ]
+      children: 
+        - 
+          type: splitter
+          orientation: horizontal
+          sizes: [ 466, 1018 ]
+          children: 
+            - 
+              type: splitter
+              orientation: vertical
+              sizes: [ 477, 475 ]
+              children: 
+                - 
+                  type: pane
+                  views: [ 1 ]
+                  current: 1
+                - 
+                  type: pane
+                  views: [ 0, 14, 17, 8 ]
+                  current: 8
+            - 
+              type: splitter
+              orientation: vertical
+              sizes: [ 670, 282 ]
+              children: 
+                - 
+                  type: splitter
+                  orientation: horizontal
+                  sizes: [ 226, 786 ]
+                  children: 
+                    - 
+                      type: pane
+                      views: [ 15, 16 ]
+                      current: 15
+                    - 
+                      type: pane
+                      views: [ 5 ]
+                      current: 5
+                - 
+                  type: pane
+                  views: [ 2, 19, 13 ]
+                  current: 13
+        - 
+          type: splitter
+          orientation: vertical
+          sizes: [ 772, 180 ]
+          children: 
+            - 
+              type: pane
+              views: [ 12, 18, 11 ]
+              current: 11
+            - 
+              type: pane
+              views: [ 9 ]
+              current: 9
+layoutOfToolBars: 
+  rows: 
+    - 
+      - { name: "FileBar", x: 0, priority: 0 }
+      - { name: "TimeBar", x: 47, priority: 0 }
+      - { name: "ScriptBar", x: 1193, priority: 0 }
+      - { name: "SceneBar", x: 1260, priority: 0 }
+      - { name: "GraphBar", x: 1514, priority: 0 }
+      - { name: "CaptureBar", x: 1621, priority: 0 }
+    - 
+      - { name: "BodyBar", x: 0, priority: 0 }
+      - { name: "KinematicsBar", x: 546, priority: 0 }
+      - { name: "RobotAccessBar", x: 917, priority: 0 }
+      - { name: "SimulationBar", x: 1109, priority: 1 }
+    - 
+      - { name: "DRCBar", x: 0, priority: 0 }
