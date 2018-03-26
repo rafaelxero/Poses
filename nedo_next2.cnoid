@@ -1,0 +1,552 @@
+items: 
+  id: 0
+  name: "Root"
+  plugin: Base
+  class: RootItem
+  children: 
+    - 
+      id: 1
+      name: "wooden_table"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "../../../Models/Construction/wooden_table.wrl"
+        currentBaseLink: "Root"
+        rootPosition: [ 0, 0, -0.15 ]
+        rootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        jointPositions: [  ]
+        initialRootPosition: [ 0, 0, 0 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: false
+    - 
+      id: 2
+      name: "HRP2KAI"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "${MODEL}/HRP2KAI/model/HRP2KAImain.wrl"
+        currentBaseLink: "WAIST"
+        rootPosition: [ 1.19913953, 1.04749752, 0.829069437 ]
+        rootAttitude: [ 
+          0.84868525, 0.203865037, 0.48802909, 
+          0.166608741, 0.77270108, -0.612514954, 
+          -0.501970989, 0.601142319, 0.621814312 ]
+        jointPositions: [ 
+          -0.585821, -0.610865, -1.118663,  0.659295, -0.458446,  0.174955,  0.406962,  0.579796, -1.798410,  2.040476, 
+          -0.618477,  0.007222,  0.000000,  0.210119,  0.350354, -0.373652, -1.798809,  0.000000,  0.293721, -0.536123, 
+           0.000000,  0.000000,  0.000000,  0.000000, -0.996381, -0.059838,  0.074497, -0.529320, -0.971997,  0.689806, 
+          -0.075342,  0.000000,  0.000000,  0.000000,  0.000000, -0.465303,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000 ]
+        initialRootPosition: [ 0, 0, 0.838 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        initialJointPositions: [ 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: true
+    - 
+      id: 3
+      name: "longfloor"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "${MODEL}/longfloor.wrl"
+        currentBaseLink: "WAIST"
+        rootPosition: [ 5, 0, -0.1 ]
+        rootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        jointPositions: [  ]
+        initialRootPosition: [ 5, 0, -0.1 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: false
+    - 
+      id: 4
+      name: "HRP2KAI"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "${MODEL}/HRP2KAI/model/HRP2KAImain.wrl"
+        currentBaseLink: "WAIST"
+        rootPosition: [ 2.77408872, 1.63866845, 1.05921699 ]
+        rootAttitude: [ 
+          0.991320988, 0, 0.13146368, 
+          0, 1, 0, 
+          -0.13146368, 0, 0.991320988 ]
+        jointPositions: [ 
+          -0.000261, -0.254698, -0.961492,  2.531418, -0.032117, -0.171686,  0.204886,  0.573097, -0.734135,  2.396695, 
+          -0.285733,  0.088753,  0.000000,  0.767529,  0.000000, -0.878101, -1.447136, -0.247278,  0.281221, -1.166610, 
+           1.095389, -1.490038, -1.291029,  0.000000, -2.176036,  0.252005,  0.148015, -0.320815, -1.749083,  1.562266, 
+          -4.576991,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000 ]
+        initialRootPosition: [ 0, 0, 0.838 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        initialJointPositions: [ 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: true
+    - 
+      id: 5
+      name: "tool"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "${MODEL}/testbed_tool.wrl"
+        currentBaseLink: "WAIST"
+        rootPosition: [ 3.31168071, 1.33262509, 1.50721954 ]
+        rootAttitude: [ 
+          -0.0175627672, 0.00110008328, 0.999845158, 
+          0.0625147248, 0.998044042, 2.16840434e-19, 
+          -0.997889502, 0.0625050449, -0.0175971866 ]
+        jointPositions: [  ]
+        initialRootPosition: [ 0, 0, 0 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: true
+    - 
+      id: 6
+      name: "wooden_wall2"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "../../../Models/Construction/wooden_wall2.wrl"
+        currentBaseLink: "Root"
+        rootPosition: [ 3.7, 0, 0 ]
+        rootAttitude: [ 
+          6.123234e-17, -1, 0, 
+          1, 6.123234e-17, 0, 
+          0, 0, 1 ]
+        jointPositions: [  ]
+        initialRootPosition: [ 0, 0, 0 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: false
+    - 
+      id: 7
+      name: "step-ladder2"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "../../../Models/Construction/step-ladder2.wrl"
+        currentBaseLink: "Root"
+        rootPosition: [ 0.9, 1, 0 ]
+        rootAttitude: [ 
+          6.123234e-17, 1, 0, 
+          -1, 6.123234e-17, 0, 
+          0, 0, 1 ]
+        jointPositions: [  ]
+        initialRootPosition: [ 0, 0, 0 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: false
+    - 
+      id: 8
+      name: "HRP2KAI"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "${MODEL}/HRP2KAI/model/HRP2KAIBush_main.wrl"
+        currentBaseLink: "WAIST"
+        rootPosition: [ 0.887397701, 0.820641206, 1.0878232 ]
+        rootAttitude: [ 
+          0.866025404, 0, 0.5, 
+          0, 1, 0, 
+          -0.5, 0, 0.866025404 ]
+        jointPositions: [ 
+           0.000000,  0.036652, -0.715585,  0.255103, -0.041888, -0.036652,  0.000000, -0.113446, -1.722640,  1.744410, 
+          -0.485202,  0.089012,  0.000000,  0.058813,  0.000000,  0.000000,  0.068613, -0.288235,  0.348879, -1.608170, 
+           0.000000, -0.211165, -0.208270,  0.000000,  0.275035,  0.125990,  0.233557, -1.404012,  1.481419, -1.231013, 
+          -1.498097,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000463, 
+           0.000000,  0.000000,  0.000000,  0.000000, -0.038885,  0.000000,  0.000000,  0.006529 ]
+        initialRootPosition: [ 0, 0, 0.838 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        initialJointPositions: [ 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
+           0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: true
+    - 
+      id: 9
+      name: "tool"
+      plugin: Body
+      class: BodyItem
+      data: 
+        modelFile: "${MODEL}/testbed_tool.wrl"
+        currentBaseLink: "WAIST"
+        rootPosition: [ 2.10378836, 1.32267442, 0.82467767 ]
+        rootAttitude: [ 
+          -0.0348994967, 0, 0.999390827, 
+          0, 1, 0, 
+          -0.999390827, -0, -0.0348994967 ]
+        jointPositions: [  ]
+        initialRootPosition: [ 0, 0, 0 ]
+        initialRootAttitude: [ 
+          1, 0, 0, 
+          0, 1, 0, 
+          0, 0, 1 ]
+        zmp: [ 0, 0, 0 ]
+        collisionDetection: true
+        selfCollisionDetection: false
+        isEditable: true
+views: 
+  - 
+    id: 0
+    plugin: Base
+    class: ItemPropertyView
+    mounted: true
+  - 
+    id: 1
+    plugin: Base
+    class: ItemTreeView
+    mounted: true
+    state: 
+      selected: [ 9 ]
+      checked: [ 1, 3, 6, 7, 8, 9 ]
+      expanded: [ 4, 6, 7 ]
+  - 
+    id: 2
+    plugin: Base
+    class: MessageView
+    mounted: true
+  - 
+    id: 3
+    plugin: Base
+    class: SceneView
+    mounted: true
+    state: 
+      editMode: false
+      viewpointControlMode: thirdPerson
+      collisionLines: false
+      polygonMode: fill
+      defaultHeadLight: true
+      defaultHeadLightIntensity: 0.75
+      headLightLightingFromBack: false
+      worldLight: true
+      worldLightIntensity: 0.5
+      worldLightAmbient: 0.3
+      additionalLights: true
+      fog: true
+      floorGrid: true
+      floorGridSpan: 10
+      floorGridInterval: 0.5
+      xzGridSpan: 10
+      xzGridInterval: 0.5
+      xzGrid: false
+      yzGridSpan: 10
+      yzGridInterval: 0.5
+      texture: true
+      lineWidth: 1
+      pointSize: 1
+      normalVisualization: false
+      normalLength: 0.01
+      coordinateAxes: true
+      showFPS: false
+      enableNewDisplayListDoubleRendering: false
+      useBufferForPicking: true
+      cameras: 
+        - 
+          camera: [ System, Perspective ]
+          isCurrent: true
+          fieldOfView: 0.6978
+          near: 0.01
+          far: 100
+          eye: [ -0.387817031, -1.68015632, 2.06986719 ]
+          direction: [ 0.603088499, 0.706188554, -0.370920462 ]
+          up: [ 0.240881213, 0.282060685, 0.928664639 ]
+        - 
+          camera: [ System, Orthographic ]
+          orthoHeight: 2.10798
+          near: 0.01
+          far: 100
+      backgroundColor: [ 0.100000001, 0.100000001, 0.300000012 ]
+      gridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
+      xzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
+      yzgridColor: [ 0.899999976, 0.899999976, 0.899999976, 1 ]
+      dedicatedItemTreeViewChecks: false
+  - 
+    id: 4
+    name: "Task"
+    plugin: Base
+    class: TaskView
+    state: 
+      layoutMode: horizontal
+      isAutoMode: false
+  - 
+    id: 5
+    plugin: Body
+    class: BodyLinkView
+    mounted: true
+    state: 
+      showRotationMatrix: false
+  - 
+    id: 6
+    plugin: Body
+    class: JointSliderView
+    mounted: true
+    state: 
+      showAllJoints: true
+      jointId: false
+      name: true
+      numColumns: 1
+      spinBox: true
+      slider: true
+      labelOnLeft: true
+      currentBodyItem: 9
+  - 
+    id: 7
+    plugin: Body
+    class: LinkSelectionView
+    mounted: true
+    state: 
+      listingMode: "Link List"
+      currentBodyItem: 9
+      bodyItems: 
+        - 
+          id: 2
+          selectedLinks: [ 20 ]
+        - 
+          id: 1
+          selectedLinks: [ 0 ]
+        - 
+          id: 4
+          selectedLinks: [ 0 ]
+        - 
+          id: 7
+          selectedLinks: [ 0 ]
+  - 
+    id: 8
+    plugin: Python
+    class: PythonConsoleView
+    mounted: true
+toolbars: 
+  "TimeBar": 
+    minTime: 0
+    maxTime: 30
+    frameRate: 100
+    playbackFrameRate: 50
+    idleLoopDrivenMode: false
+    currentTime: 0
+    speedScale: 1
+    syncToOngoingUpdates: true
+    autoExpansion: true
+  "KinematicsBar": 
+    mode: AUTO
+    enablePositionDragger: false
+    penetrationBlock: false
+    collisionLinkHighlight: false
+    snapDistance: 0.025
+    penetrationBlockDepth: 0.0005
+    lazyCollisionDetectionMode: true
+  "BodyBar": 
+    current: 9
+  "LeggedBodyBar": 
+    stanceWidth: 0.15
+  "BodyMotionGenerationBar": 
+    autoGenerationForNewBody: true
+    balancer: false
+    autoGeneration: false
+    timeScaleRatio: 1
+    preInitialDuration: 1
+    postFinalDuration: 1
+    onlyTimeBarRange: false
+    makeNewBodyItem: true
+    stealthyStepMode: true
+    stealthyHeightRatioThresh: 2
+    flatLiftingHeight: 0.005
+    flatLandingHeight: 0.005
+    impactReductionHeight: 0.005
+    impactReductionTime: 0.04
+    autoZmp: true
+    minZmpTransitionTime: 0.1
+    zmpCenteringTimeThresh: 0.03
+    zmpTimeMarginBeforeLiftingSpin: 0
+    zmpMaxDistanceFromCenter: 0.02
+    allLinkPositions: false
+    lipSyncMix: false
+    timeToStartBalancer: 0
+    balancerIterations: 2
+    plainBalancerMode: false
+    boundaryConditionType: position
+    boundarySmootherType: quintic
+    boundarySmootherTime: 0.5
+    boundaryCmAdjustment: false
+    boundaryCmAdjustmentTime: 1
+    waistHeightRelaxation: false
+    gravity: 9.8
+    dynamicsTimeRatio: 1
+Body: 
+  "BodyMotionEngine": 
+    updateJointVelocities: false
+  "EditableSceneBody": 
+    editableSceneBodies: 
+      - 
+        bodyItem: 1
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 2
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 3
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 4
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 5
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 6
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 7
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 8
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      - 
+        bodyItem: 9
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+    staticModelEditing: true
+  "KinematicFaultChecker": 
+    checkJointPositions: true
+    angleMargin: 0
+    translationMargin: 0
+    checkJointVelocities: true
+    velocityLimitRatio: 100
+    targetJoints: all
+    checkSelfCollisions: true
+    onlyTimeBarRange: false
+OpenRTM: 
+  "deleteUnmanagedRTCsOnStartingSimulation": false
+viewAreas: 
+  - 
+    type: embedded
+    tabs: true
+    contents: 
+      type: splitter
+      orientation: horizontal
+      sizes: [ 521, 2249 ]
+      children: 
+        - 
+          type: splitter
+          orientation: vertical
+          sizes: [ 684, 683 ]
+          children: 
+            - 
+              type: pane
+              views: [ 1 ]
+              current: 1
+            - 
+              type: pane
+              views: [ 0, 7 ]
+              current: 0
+        - 
+          type: splitter
+          orientation: vertical
+          sizes: [ 976, 391 ]
+          children: 
+            - 
+              type: splitter
+              orientation: horizontal
+              sizes: [ 1043, 1200 ]
+              children: 
+                - 
+                  type: pane
+                  views: [ 5, 6 ]
+                  current: 5
+                - 
+                  type: pane
+                  views: [ 3 ]
+                  current: 3
+            - 
+              type: pane
+              views: [ 2, 8 ]
+              current: 2
+layoutOfToolBars: 
+  rows: 
+    - 
+      - { name: "FileBar", x: 0, priority: 0 }
+      - { name: "ScriptBar", x: 47, priority: 0 }
+      - { name: "TimeBar", x: 94, priority: 0 }
+      - { name: "SceneBar", x: 1544, priority: 0 }
+      - { name: "GraphBar", x: 1842, priority: 0 }
+      - { name: "SimulationBar", x: 1949, priority: 0 }
+      - { name: "BodyBar", x: 2146, priority: 0 }
+      - { name: "KinematicsBar", x: 2406, priority: 0 }
+      - { name: "BodyMotionGenerationBar", x: 2640, priority: 0 }
+    - 
+      - { name: "CaptureBar", x: 0, priority: 0 }
