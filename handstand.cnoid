@@ -38,8 +38,8 @@ items:
               -5.55111512e-17, 2.08166817e-17, 1 ]
             jointPositions: [ 
               -0.000000, -0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
-               0.000000,  0.000000,  0.000000,  0.000000, -0.000000,  0.000000,  0.000000,  0.018784, -0.297315, -1.598948, 
-              -1.413655, -2.191386,  0.660322, -0.330409,  0.577517, -1.943757,  0.000000,  0.000000,  0.000000,  0.000000, 
+               0.000000,  0.000000, -0.000000, -0.000000,  0.000000,  0.000000,  0.000000, -0.058403, -2.981941, -0.690165, 
+               1.138719, -0.991035,  0.488186, -0.558416,  0.284433, -1.624752,  0.000000,  0.000000,  0.000000,  0.000000, 
                0.000000,  0.000000,  0.000000,  0.000000,  0.000000, -0.019199, -0.296706,  1.598910,  1.413605, -2.192134, 
               -0.659734,  0.329867,  0.577704,  1.944297,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000,  0.000000, 
                0.000000,  0.000000,  0.000000,  0.000000 ]
@@ -250,9 +250,9 @@ views:
           fieldOfView: 0.6978
           near: 0.01
           far: 10000
-          eye: [ 2.07283964, -0.679635867, 2.18859441 ]
-          direction: [ -0.82132674, 0.448692831, -0.352274225 ]
-          up: [ -0.309149719, 0.168889256, 0.935896827 ]
+          eye: [ 1.56644002, 1.32370791, 0.804716224 ]
+          direction: [ -0.609785583, -0.706022597, 0.360130026 ]
+          up: [ -0.235396718, -0.272547281, -0.93290212 ]
         - 
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -344,7 +344,7 @@ views:
       bodyItems: 
         - 
           id: 3
-          selectedLinks: [ 15 ]
+          selectedLinks: [ 32 ]
         - 
           id: 5
           selectedLinks: [ 0 ]
@@ -393,8 +393,6 @@ toolbars:
     speedScale: 1
     syncToOngoingUpdates: true
     autoExpansion: true
-  "LeggedBodyBar": 
-    stanceWidth: 0.15
   "KinematicsBar": 
     mode: IK
     enablePositionDragger: true
@@ -405,6 +403,8 @@ toolbars:
     lazyCollisionDetectionMode: true
   "BodyBar": 
     current: 3
+  "LeggedBodyBar": 
+    stanceWidth: 0.15
   "BodyMotionGenerationBar": 
     autoGenerationForNewBody: true
     balancer: false
@@ -490,7 +490,7 @@ viewAreas:
             - 
               type: splitter
               orientation: vertical
-              sizes: [ 526, 524 ]
+              sizes: [ 466, 464 ]
               children: 
                 - 
                   type: pane
@@ -503,7 +503,7 @@ viewAreas:
             - 
               type: splitter
               orientation: vertical
-              sizes: [ 590, 460 ]
+              sizes: [ 523, 407 ]
               children: 
                 - 
                   type: splitter
@@ -525,7 +525,7 @@ viewAreas:
         - 
           type: splitter
           orientation: vertical
-          sizes: [ 851, 199 ]
+          sizes: [ 754, 176 ]
           children: 
             - 
               type: pane
